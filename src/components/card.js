@@ -1,5 +1,32 @@
 const Card = (article) => {
-  
+  const newCard = document.createElement('div')
+  const headline = document.createElement('div');
+  const imageContainer = document.createElement('div');
+  const author = document.createElement('div');
+  const span = document.createElement('span');
+  const authorPhoto = document.createElement('img');
+
+  newCard.appendChild(headline)
+  newCard.appendChild(author)
+  author.appendChild(imageContainer)
+  author.appendChild(span)
+  imageContainer.appendChild(authorPhoto)
+
+  headline.textContent = article.headline;
+  span.textContent = article.authorName;
+  authorPhoto.src = article.authorPhoto;
+
+  newCard.classList.add('card');
+  headline.classList.add('headline');
+  author.classList.add('author');
+  imageContainer.classList.add('img-container');
+  authorPhoto.classList.add('authorPhoto');
+
+  newCard. addEventListener ('click', () =>{
+    console.log(article.headline)
+  })
+  return newCard;
+}
   // TASK 5
   // ---------------------
   // Implement this function, which should return the markup you see below.
@@ -18,7 +45,7 @@ const Card = (article) => {
   //   </div>
   // </div>
   //
-}
+
 
 const cardAppender = (selector) => {
   // TASK 6
