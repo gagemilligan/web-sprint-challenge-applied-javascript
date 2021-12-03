@@ -1,19 +1,19 @@
 const Tabs = (topics) => {
-  const div = document.createdElement('div');
-  const div2 = document.createdElement('div2');
-  const div3 = document.createdElement('div3');
-  const div4 = document.createdElement('div4');
+  const div = document.createElement('div');
+  const div2 = document.createElement('tab1');
+  const div3 = document.createElement('tab2');
+  const div4 = document.createElement('tab3');
 
-  div.appendChild(div2);
-  div.appendChild(div3);
-  div.appendChild(div4);
+  div2.appendChild(div2);
+  div3.appendChild(div3);
+  div4.appendChild(div4);
 
   div.classList.add('topics');
-  div2.classList.add('tab');
-  div3.classList.add('tab');
-  div4.classList.add('tab');
+  div2.classList.add('tab1');
+  div3.classList.add('tab2');
+  div4.classList.add('tab3');
 
-  div.textContent = (topics);
+div.textContent = (topics)
   div2.textContent = 'javascript';
   div3.textContent = 'bootstrap';
   div4.textContent = 'technology';
